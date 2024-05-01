@@ -17,7 +17,7 @@ export default function Fifth() {
     ]
     return (
         <section className='bg-[#fafafc]' id='Novedades'>
-            <div className='max-w-[1450px] mx-auto py-[100px]'>
+            <div className='max-w-[1450px] mx-auto py-[100px] px-4'>
                 <div className='mb-[60px]'>
                     <h2 className='font-bold text-[3rem]'>Novedades</h2>
                 </div>

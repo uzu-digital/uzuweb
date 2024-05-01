@@ -6,12 +6,11 @@ import Third from "./Third";
 
 export default function Main() {
     return (
-        <main>
+        <main id="main">
             <First />
             <Second />
             <Third />
             <Fourth />
-            <Fifth />
         </main>
     )
 }

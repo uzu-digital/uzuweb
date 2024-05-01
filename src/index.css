@@ -117,18 +117,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .input-form:focus~.bar-dow-input::before,
-.input-form:valid~.bar-dow-input::before,
+.input-form:user-valid~.bar-dow-input::before,
 .text-area-form:focus~.bar-dow-input::before,
-.text-area-form:valid~.bar-dow-input::before {
+.text-area-form:user-valid~.bar-dow-input::before {
     background-color: #00cbd8;
     transform: scaleX(1);
-    
+
 }
 
 .input-form:focus~.float-label,
-.input-form:valid~.float-label,
+.input-form:user-valid~.float-label,
 .text-area-form:focus~.float-label,
-.text-area-form:valid~.float-label {
+.text-area-form:user-valid~.float-label {
     font-size: 0.7rem;
     transform: translateY(-13px);
 }
@@ -150,6 +150,269 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contact-button:hover {
-    transform: scale(1.15, 1.15);   
+    transform: scale(1.15, 1.15);
 }
 
+.hiddenElement {
+    display: none;
+}
+
+.showElement {
+    display: block;
+}
+
+/*
+    RESPONSIVE Header
+*/
+
+@media screen and (max-width: 1440px) {
+    .container-nosotros > div:first-child > h2 {
+        font-size: 2.4rem;
+    }
+
+    .container-nosotros > div:first-child > p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .container-nosotros {
+        max-height: 310px;
+    }
+
+    .container-nosotros > div:last-child {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container-nosotros {
+        max-height: 260px;
+    }
+    .container-nosotros > div:last-child {
+        margin-top: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #menu {
+        display: none;
+    }
+
+    .container-menu-mobile {
+        position: absolute;
+        z-index: 11;
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        padding: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-menu-in {
+        display: flex;
+        animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+    }
+
+
+    .container-menu-out {
+        display: flex;
+        animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-top-right both;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    .text-first {
+        font-size: 60px;
+        line-height: 3.6rem;
+    }
+
+    .text-first-blue {
+        height: 50px;
+    }
+
+    .line {
+        top: 53%;
+    }
+
+    .contact-button {
+        padding-top: 1rem;
+        width: 8rem;
+    }
+    /*
+        SECOND
+    */
+    #Nosotros {
+        max-height: 100%;
+        justify-content: center;
+    }
+
+    .container-nosotros {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        margin: 80px 20px;
+        max-height: 380px;
+    }
+    
+    .container-nosotros > div:first-child {
+        padding-left: 0;
+    }
+
+    .container-nosotros > div:last-child {
+        max-width: 580px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    /*
+        THIRD
+    */
+    #Servicios > div {
+        padding: 100px 20px;
+    }
+    #Servicios > div > div {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #Servicios > div > div div > div:last-child {
+     width: 130px;   
+    }
+
+
+    #Clientes > div > div:first-child > h2 {
+        font-size: 2rem;
+    }
+
+    #Clientes > div {
+        padding: 3rem 20px;
+    }
+
+    #Novedades > div {
+        padding: 100px 20px;
+    }
+
+    #Novedades > div > div:first-child > h2 {
+        font-size: 2rem;
+    }
+    #Novedades > div > div:first-child {
+        margin-bottom: 30px;
+    }
+
+    #Novedades > div > div:nth-child(2) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #Novedades > div > div:last-child {
+        margin-top: 4rem;
+    }
+    
+    #Contacto > div {
+        padding: 4rem 20px 2rem 20px;
+    }
+
+    #Contacto > div > div:first-child > h2 {
+        font-size: 5rem; 
+    }
+
+    #Contacto > div > div:nth-child(2) {
+        padding: 3rem 70px 8rem 70px;
+    }
+    
+
+}
+
+@media screen and (max-width: 530px) {
+    .text-first {
+        font-size: 40px;
+        line-height: 3rem;
+    }
+
+    .text-first-blue {
+        height: 36px;
+    }
+
+    .line {
+        top: 50%;
+    }
+
+    #Servicios > div > div {
+        grid-template-columns: 1fr;
+    }
+
+    #Nosotros > div > div:first-child > h2 {
+        font-size: 2rem;
+    }
+    #Nosotros > div > div:first-child > p {
+        font-size: 1rem;
+    }
+
+    #Novedades > div {
+        padding: 60px 20px;
+    }
+
+    #Contacto > div > div:first-child > h2 {
+        font-size: 3rem;
+    }
+    #Contacto > div > div:nth-child(2) {
+        padding: 3rem 0 8rem 0;
+    }
+    #Contacto > div > div:last-child {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .text-first {
+        font-size: 34px;
+        line-height: 2.5rem;
+    }
+    .text-first-blue {
+        height: 30px;
+    }
+    .line {
+        top: 47%;
+    }
+    .contact-button {
+        width: 7rem;
+    }
+    #Nosotros > div > div:first-child > h2 {
+        font-size: 1.6rem;
+    }
+    #Contacto > div > div:last-child {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+
+@keyframes circle-in-top-right {
+    from {
+        clip-path: circle(0%);
+    }
+
+    to {
+        clip-path: circle(150% at top right);
+    }
+}
+
+@keyframes circle-out-top-right {
+    from {
+        clip-path: circle(125%);
+    }
+
+    to {
+        clip-path: circle(0% at top right);
+    }
+}

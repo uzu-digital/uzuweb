@@ -16,7 +16,7 @@ export default function Third() {
     ];
     return (
         <section class="bg-[#fafafc]" id='Servicios'>
-            <div class="py-[200px]">
+            <div class="py-[200px] px-4">
                 <div class="grid grid-cols-3 justify-items-center max-w-[1400px] gap-y-9 mx-auto font-bold">
                     <div class="flex items-center gap-4">
                         <div class="w-20"><img class="w-full" src={services[0].image} alt="" /></div>
