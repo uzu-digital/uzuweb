@@ -13,7 +13,7 @@ function App() {
         <Menu menuButton={menuButton} setMenuButton={setMenuButton}/>
         <Header menuButton={menuButton} setMenuButton={setMenuButton}/>
         <Main />
-        <Footer />
+        <Footer isLetter={false} />
     </>
   )
 }

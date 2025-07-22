@@ -45,7 +45,9 @@ export default function Header({menuButton, setMenuButton}) {
         <header className="sticky top-0 z-[11] bg-white">
             <div class="flex items-center max-w-[1100px] mx-auto py-7 px-12 justify-between">
                 <div class="w-36 relative z-20">
-                    <img class="w-full" src={UzuLogo} alt="" />
+                    <a className="w-full" href="/">
+                        <img class="w-full" src={UzuLogo} alt="" />
+                    </a>
                 </div>
                 <div className="hidden max-[900px]:block relative z-20">
                     <button className="flex flex-col gap-1 w-8" onClick={open}>

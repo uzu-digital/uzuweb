@@ -30,6 +30,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Raleway';
+    src: url("/Raleway/Raleway-MediumItalic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+
 html {
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
@@ -372,6 +379,15 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+@media screen and (max-width: 640px) {
+    #Contacto > div > div:last-child {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .text-first {
         font-size: 34px;
@@ -389,11 +405,7 @@ body::-webkit-scrollbar-thumb {
     #Nosotros > div > div:first-child > h2 {
         font-size: 1.6rem;
     }
-    #Contacto > div > div:last-child {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
+    
 }
 
 
