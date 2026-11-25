@@ -37,11 +37,11 @@ export default function Footer({ isLetter }) {
 
   const sendValues = async (values) => {
     try {
-      const responseEmail = await axios.post(`https://uzu.digital/hello.php?name=${values.name}&tel=${values.tel}&message=${values.message}&email=${values.email}`)
+      const responseEmail = await axios.post("https://uzu.digital/hello.php", null, { params: { name: values.name, tel: values.tel, message: values.message, email: values.email } })
       setResponse(responseEmail.data)
       setSend(false)
     } catch {
-      console.log(response)
+      setSend(false)
     }
   }
 
@@ -83,7 +83,7 @@ export default function Footer({ isLetter }) {
                     : ""
                 }
                 <div className='relative'>
-                  <input {...register("name", { required: true })} className='input-form' type="text" name="name" id="name" />
+                  <input {...register("name", { required: true })} placeholder=" " className='input-form' type="text" name="name" id="name" />
                   <label htmlFor="name" className='float-label'>Nombre</label>
                   <div className='bar-dow-input'></div>
                   {
@@ -93,7 +93,7 @@ export default function Footer({ isLetter }) {
                   }
                 </div>
                 <div className='relative'>
-                  <input {...register("email", { required: true })} className='input-form' type="email" name="email" id="email" />
+                  <input {...register("email", { required: true })} placeholder=" " className='input-form' type="email" name="email" id="email" />
                   <label htmlFor="email" className='float-label'>Email</label>
                   <div className='bar-dow-input'></div>
                   {
@@ -103,7 +103,7 @@ export default function Footer({ isLetter }) {
                   }
                 </div>
                 <div className='relative'>
-                  <input maxLength={11} {...register("tel", { required: true })} className='input-form' type="tel" name="tel" id="tel" />
+                  <input maxLength={11} {...register("tel", { required: true })} placeholder=" " className='input-form' type="tel" name="tel" id="tel" />
                   <label className='float-label' htmlFor="tel">Teléfono</label>
                   <div className='bar-dow-input'></div>
                   {
@@ -113,7 +113,7 @@ export default function Footer({ isLetter }) {
                   }
                 </div>
                 <div className='relative'>
-                  <textarea {...register("message", { required: true })} className='text-area-form' name="message" id="message" cols="30" rows="3"></textarea>
+                  <textarea {...register("message", { required: true })} placeholder=" " className='text-area-form' name="message" id="message" cols="30" rows="3"></textarea>
                   <label className='float-label' htmlFor="message">Mensaje</label>
                   <div className='bar-dow-input'></div>
                   {

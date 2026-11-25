@@ -124,18 +124,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .input-form:focus~.bar-dow-input::before,
-.input-form:user-valid~.bar-dow-input::before,
+.input-form:not(:placeholder-shown)~.bar-dow-input::before,
 .text-area-form:focus~.bar-dow-input::before,
-.text-area-form:user-valid~.bar-dow-input::before {
+.text-area-form:not(:placeholder-shown)~.bar-dow-input::before {
     background-color: #00cbd8;
     transform: scaleX(1);
 
 }
 
+/* shortcut: placeholder-shown instead of :user-valid, so autofilled values also float the label */
 .input-form:focus~.float-label,
-.input-form:user-valid~.float-label,
+.input-form:not(:placeholder-shown)~.float-label,
 .text-area-form:focus~.float-label,
-.text-area-form:user-valid~.float-label {
+.text-area-form:not(:placeholder-shown)~.float-label {
     font-size: 0.7rem;
     transform: translateY(-13px);
 }
